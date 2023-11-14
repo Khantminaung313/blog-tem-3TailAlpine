@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/public/output.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+    </head>
+	<body class="overflow-x-hidden font-poppins">
+
+        <!-- Nav Section -->
+		<div id="nav" class="z-50 fixed top-0 left-0 w-full bg-gradient-to-br from-first to-second">
+			<nav
+				x-data="{open : false}"
+				class="md:mx-28 p-2 md:flex items-center justify-between"
+			>
+				<div class="flex items-center justify-between">
+					<div class="flex items-center gap-3">
+						<img
+							class="w-[50px] h-[50px] rounded-full select-none"
+							src="https://images.pexels.com/photos/19089424/pexels-photo-19089424/free-photo-of-wood-dry-texture-winter.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+							alt=""
+						/>
+						<a
+							class="text-wh text-2xl uppercase hover:text-second select-none"
+							href="#"
+							>Dean</a
+						>
+					</div>
+					
+					<div @click="open = !open" class="md:hidden">
+                        <i id="nav-btn" class="fa-solid fa-bars text-2xl text-wh"></i>
+                    </div>
+				</div>
+				<!-- Desktop Menu -->
+				<ul id="nav-bar" class="md:flex md:gap-5 hidden">
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#home">Home</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#blogs">Blogs</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#aboutMe">About Me</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#contactMe">Contact Me</a></li>
+				</ul>
+
+				<!-- Mobile Menu -->
+				<ul x-show="open" x-on:scroll.window="open = false" id="nav-bar">
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#home">Home</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#blogs">Blogs</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#aboutMe">About Me</a></li>
+					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#contactMe">Contact Me</a></li>
+				</ul>
+			</nav>
+		</div>
+
+        <!-- Hero Section -->
+        <div id="home" class="w-screen h-screen text-bl bg-[url(https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&w=1600)] bg-no-repeat bg-cover flex items-center justify-center">
+            <article class="text-start text-wh w-10/12 md:w-9/12 lg:w-6/12 xl:w-2/5">
+                <h1 class="text-4xl font-extrabold text-second first-letter:text-wh first-letter:text-[4rem] capitalize">Welcome to my blog</h1>
+                <p class="mt-5 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ipsa fuga modi qui ab adipisci eum ut aspernatur! Quis, earum?</p>
+                <a href="#blogs" class="btn mt-14 animate-bounce " type="button">Click Here </a>
+               
+            </article>
+        </div>
+
+        <!-- blogs section -->
+        <section id="blogs">
+            <div class="mx-8 md:mx-28">
+                <h2 class="text-second first-letter:text-wh heading">Blogs</h2>
+				<p class="text-center text-wh w-10/12 lg:w-2/4 mx-auto pb-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis eum blanditiis consequatur? Ullam sapiente doloribus omnis tempora quisquam quas.</p>
+				<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-3 text-wh">
+					<div class="card">
+						<div class="mb-3">
+							<img src="https://images.pexels.com/photos/18894303/pexels-photo-18894303/free-photo-of-close-up-of-headlights.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="first-blog">
+						</div>
+						<h3 class="text-second text-2xl font-extrabold my-5">My First Blog</h3>
+						<p class="my-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit beatae laboriosam ab, consequuntur doloribus officiis optio! Nemo eligendi dignissimos minus!</p>
+						<a class="btn" href="#">See More</a>
+					</div>
+					<div class="card">
+						<div class="mb-3">
+							<img src="https://images.pexels.com/photos/18894303/pexels-photo-18894303/free-photo-of-close-up-of-headlights.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="first-blog">
+						</div>
+						<h3 class="text-second text-2xl font-extrabold my-5">My First Blog</h3>
+						<p class="my-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit beatae laboriosam ab, consequuntur doloribus officiis optio! Nemo eligendi dignissimos minus!</p>
+						<a class="btn" href="#">See More</a>
+					</div>
+					<div class="card">
+						<div class="mb-3">
+							<img src="https://images.pexels.com/photos/18894303/pexels-photo-18894303/free-photo-of-close-up-of-headlights.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="first-blog">
+						</div>
+						<h3 class="text-second text-2xl font-extrabold my-5">My First Blog</h3>
+						<p class="my-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit beatae laboriosam ab, consequuntur doloribus officiis optio! Nemo eligendi dignissimos minus!</p>
+						<a class="btn" href="#">See More</a>
+					</div>
+					<div class="card">
+						<div class="mb-3">
+							<img src="https://images.pexels.com/photos/18894303/pexels-photo-18894303/free-photo-of-close-up-of-headlights.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="first-blog">
+						</div>
+						<h3 class="text-second text-2xl font-extrabold my-5">My First Blog</h3>
+						<p class="my-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit beatae laboriosam ab, consequuntur doloribus officiis optio! Nemo eligendi dignissimos minus!</p>
+						<a class="btn" href="#">See More</a>
+					</div>
+				</div>
+            </div>
+        </section>
+
+		<!-- AboutMe Section -->
+		<section id="aboutMe">
+			<div class="mx-8 lg:mx-28">
+				<h1 class="heading text-second first-letter:text-wh">About Me</h1>
+				<p class="text-center text-wh w-10/12 lg:w-2/4 mx-auto pb-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis eum blanditiis consequatur? Ullam sapiente doloribus omnis tempora quisquam quas.</p>
+
+				<div class="grid lg:grid-cols-2 gap-3 text-wh">
+					<div class="p-0">
+						<img class="h-[30rem] bg-cover w-full" src="https://images.pexels.com/photos/18868007/pexels-photo-18868007/free-photo-of-black-and-white-photo-of-khadro-ling-buddhist-temple-tres-coroas-brazil.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="Profile Photo">
+					</div>
+					<div class="px-5">
+						<h2 class="text-xl text-second font-extrabold">About Me</h2>
+						<p class="leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem laudantium perspiciatis quaerat fuga eveniet expedita magni obcaecati soluta ad et magnam ex necessitatibus, quisquam beatae eos voluptatibus! Molestiae, voluptates.</p>
+						<div class="grid xl:grid-cols-2 mt-4 py-4 mb-3">
+							<ul>
+								<li class="whitespace-pre mb-3">Name  		: <span class="text-second">Dean</span></li>
+								<li class="whitespace-pre mb-3">Position  	: <span class="text-second">Web Developer</span></li>
+								<li class="whitespace-pre mb-3">Phone		: <a class="text-second" href="tel:+09780591018">09 780591018</a></li>
+								<li class="whitespace-pre mb-3">Phone		: <a class="text-second" href="mailto:dean@gmail.com">dean@gmail.com</a></li>
+							</ul>
+							<ul>
+								<li class="whitespace-pre mb-3">Name  		: <span class="text-second">Dean</span></li>
+								<li class="whitespace-pre mb-3">Position  	: <span class="text-second">Web Developer</span></li>
+								<li class="whitespace-pre mb-3">Phone		: <a class="text-second" href="tel:+09780591018">09 780591018</a></li>
+								<li class="whitespace-pre mb-3">Phone		: <a class="text-second" href="mailto:dean@gmail.com">dean@gmail.com</a></li>
+							</ul>
+						</div>
+						<a class="btn" href="#contactMe">Contact Me</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ContactMe Section -->
+		<section id="contactMe">
+			<div class="mx-8 lg:mx-28">
+				<h1 class="heading text-second first-letter:text-wh">Contact Me</h1>
+				<p class="text-center w-10/12 lg:w-1/2 mx-auto pb-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis eum blanditiis consequatur? Ullam sapiente doloribus omnis tempora quisquam quas.</p>
+
+				<div class="grid lg:grid-cols-2 gap-5 text-wh ">
+					<div class="my-4">
+						
+						<img class="w-full bg-cover h-[30rem]" src="./images/3d-casual-life-young-man-pointing-at-search-bar.png" alt="Contact Photo">
+					</div>
+
+					<div x-data="{message : '', open : false, name : '', mail : '', mes : ''}" class="my-4">
+						<div x-show="open" class="flex justify-between items-center p-2 border border-second shadow-inner shadow-second">
+							<span x-text.debounce.500ms="message"></span>
+							<span @click="open = false" class="bg-second text-white p-1 px-2 cursor-pointer">X</span>
+						</div>
+						<form @submit.prevent="message = 'Thanks for contacting me.', open = true, name = '', mail = '', mes = ''" 
+						class="shadow-inner shadow-second p-5" action="">
+							<h2 class="text-2xl text-wh font-semibold">Send Message</h2>
+							<div class="my-2">
+								<label class="text-second" for="name">Name</label>
+								<input x-model="name" class="w-full rounded px-3 py-2 caret-second text-wh bg-bgc border border-second outline-none" type="text" id="name" placeholder="Enter Your Name" required>
+							</div>
+
+							<div class="my-2">
+								<label class="text-second" for="email">Email</label>
+								<input x-model="mail" class="w-full rounded px-3 py-2 caret-second text-wh bg-bgc border border-second outline-none" type="email" name="email" id="email" placeholder="Enter Your Email" required>
+							</div>
+
+							<div class="my-2">
+								<label class="text-second" for="message">Message</label>
+								<textarea x-model="mes" class="w-full rounded px-3 py-2 caret-second text-wh bg-bgc border border-second outline-none" name="message" id="message" rows="10" placeholder="Enter Your Message" required></textarea>
+							</div>
+
+							<button class="btn" type="submit">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer Section -->
+		<div id="footer" class="w-full bg-gradient-to-br from-first to-second py-5">
+			<div class="mx-28">
+				<h2 class="text-bl text-center">&copy; 2023 - Dean - All Rights Reserved.</h2>
+			</div>
+		</div>
+
+        <!-- <script src="main.js"></script> -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
+	</body>
+</html>
