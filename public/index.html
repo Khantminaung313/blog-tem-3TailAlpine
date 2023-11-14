@@ -38,16 +38,10 @@
                         <i id="nav-btn" class="fa-solid fa-bars text-2xl text-wh"></i>
                     </div>
 				</div>
-				<!-- Desktop Menu -->
-				<ul id="nav-bar" class="md:flex md:gap-5 hidden">
-					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#home">Home</a></li>
-					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#blogs">Blogs</a></li>
-					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#aboutMe">About Me</a></li>
-					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#contactMe">Contact Me</a></li>
-				</ul>
+				
 
-				<!-- Mobile Menu -->
-				<ul x-show="open" x-on:scroll.window="open = false" id="nav-bar">
+				<!-- Nab Section -->
+				<ul id="nav-bar" class="md:flex md:gap-5" :class="{hidden : !open}" x-on:scroll.window="open = false">
 					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#home">Home</a></li>
 					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#blogs">Blogs</a></li>
 					<li class="py-2 text-center"><a class="text-bl hover:text-wh cursor-pointer" href="#aboutMe">About Me</a></li>

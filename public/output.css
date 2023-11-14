@@ -649,6 +649,10 @@ section{
   margin-top: 1.25rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -659,10 +663,6 @@ section{
 
 .hidden{
   display: none;
-}
-
-.h-\[28rem\]{
-  height: 28rem;
 }
 
 .h-\[30rem\]{
@@ -717,10 +717,6 @@ section{
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .items-center{
@@ -1018,11 +1014,11 @@ section{
     width: 40%;
   }
 
-  .xl\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .xl\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
