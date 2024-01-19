@@ -16,7 +16,7 @@ Using Color - 5
 - Gray
 
 
-# Installaction
+# Installation
 
     git clone https://github.com/Khantminaung313/blog-tem-3TailAlpine.git
 
